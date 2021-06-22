@@ -1,0 +1,35 @@
+.work {
+  padding-top: 47px;
+}
+.work__list {
+  display: flex;
+}
+.work__item {
+  position: relative;
+  width: calc((100% - 2 * #{$mainMargin}) / 3);
+
+  &:not(:last-child) {
+    margin-right: $mainMargin;
+  }
+}
+
+.work__title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $thirdTextColor;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  width: 100%;
+  height: 70px;
+}

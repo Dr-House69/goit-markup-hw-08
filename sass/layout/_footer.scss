@@ -1,0 +1,160 @@
+.footer {
+  background-color: $secondaryBackgroundColor;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.address__list {
+  margin-top: 20px;
+}
+.address__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+.address__link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $thirdTextColor;
+  transition: color $animationDuration $animationTimingFunction;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+.address__mail,
+.address__phone {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $addressPhoneMailColor;
+  transition: color $animationDuration $animationTimingFunction;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+.footer__content {
+  display: flex;
+  align-items: baseline;
+}
+
+.join {
+  margin: 0 93px 0 70px;
+}
+
+.join__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $thirdTextColor;
+  margin-bottom: 20px;
+}
+
+.join__list {
+  display: flex;
+  align-items: baseline;
+}
+
+.join__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.join__link {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: $thirdTextColor;
+  transition: background-color $animationDuration $animationTimingFunction;
+
+  &:focus,
+  &:hover {
+    background-color: $accentColor;
+  }
+}
+
+.subscribe__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $thirdTextColor;
+}
+
+.subscribe__form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe__input {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  background-color: $secondaryBackgroundColor;
+  color: rgba(255, 255, 255, 0.6);
+
+  width: 358px;
+  height: 50px;
+  padding: 15px 0 15px 16px;
+  margin-right: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border $animationDuration $animationTimingFunction;
+
+  &:focus,
+  &:hover {
+    border: 1px solid rgba(33, 150, 243, 0.3);
+  }
+}
+
+.subscribe__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  background-color: $accentColor;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: $thirdTextColor;
+
+  transition: background-color $animationDuration $animationTimingFunction;
+
+  &:focus,
+  &:hover {
+    background-color: $modalBtnBackgroundColor;
+    cursor: pointer;
+  }
+}
+
+.subscribe__icon {
+  fill: currentColor;
+  margin: 13px 0 13px 10px;
+}

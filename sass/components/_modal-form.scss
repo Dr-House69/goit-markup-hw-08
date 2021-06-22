@@ -1,0 +1,161 @@
+.modal-form {
+  background: $bodyBackgroundColor;
+  height: 581px;
+  padding: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__conditions > a {
+    color: $accentColor;
+  }
+}
+.modal-form__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $mainTextColor;
+  margin-bottom: 12px;
+}
+
+.modal-form__inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__field {
+  margin-bottom: 10px;
+}
+
+.modal-form__label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  color: $secondaryTextColor;
+
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.modal-form__item {
+  position: relative;
+
+  &:focus-within > .modal-form__input {
+    border: 1px solid $accentColor;
+  }
+}
+
+.modal-form__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding: 12px 12px 12px 42px;
+  color: $secondaryTextColor;
+  outline: $accentColor;
+  transition: border $animationDuration $animationTimingFunction;
+}
+
+.modal-form__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $mainTextColor;
+
+  transition: fill $animationDuration $animationTimingFunction;
+
+  .modal-form__item:focus-within > & {
+    fill: $accentColor;
+  }
+}
+
+.modal-form__comment {
+  margin-bottom: 20px;
+  &:focus-within > .modal-form__textarea {
+    border: 1px solid $accentColor;
+  }
+}
+
+.modal-form__textarea {
+  color: $secondaryTextColor;
+  width: 448px;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+  outline: $accentColor;
+  padding: 12px 16px;
+  transition: border $animationDuration $animationTimingFunction;
+}
+
+.modal-form__confirm {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  color: $secondaryTextColor;
+
+  letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: color $animationDuration $animationTimingFunction;
+}
+
+.modal-form__checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  color: $mainTextColor;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  margin-left: 14px;
+  margin-right: 7px;
+  transition: color $animationDuration $animationTimingFunction;
+
+  .modal-form__checkbox:checked + & {
+    background-image: url("../images/check.svg");
+    background-color: $accentColor;
+
+    background-size: contain;
+    background-origin: padding-box;
+    border-color: $accentColor;
+    transition: background-color $animationDuration $animationTimingFunction;
+  }
+
+  .modal-form__checkbox:focus + &,
+  .modal-form__confirm:focus > &,
+  .modal-form__confirm:hover > & {
+    cursor: pointer;
+    color: $accentColor;
+  }
+}
+
+.modal-form__button {
+  background-color: $accentColor;
+  color: $thirdTextColor;
+  width: 200px;
+  padding: 10px 56px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color $animationDuration $animationTimingFunction;
+
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    background-color: $modalBtnBackgroundColor;
+  }
+}
