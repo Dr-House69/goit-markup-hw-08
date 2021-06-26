@@ -16,6 +16,8 @@ ol {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .list {
   list-style: none;
@@ -28,4 +30,7 @@ body {
   background-color: $bodyBackgroundColor;
   letter-spacing: 0.03em;
   color: $thirdTextColor;
+}
+body.modal-open {
+  overflow: hidden;
 }

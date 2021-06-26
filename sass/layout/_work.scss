@@ -1,5 +1,9 @@
 .work {
   padding-top: 47px;
+
+  @media screen and (max-width: $desktop - 1px) {
+    display: none;
+  }
 }
 .work__list {
   display: flex;

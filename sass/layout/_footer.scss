@@ -3,9 +3,44 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer__wrapper {
+  display: flex;
 
+  @media screen and (max-width: $tablet - 1px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop - 1px) {
+    margin-bottom: 60px;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1199px) {
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-right: 165px;
+  }
+}
 .address__list {
   margin-top: 20px;
+
+  @media screen and (max-width: $desktop - 1px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .address__item {
   &:not(:last-child) {
@@ -40,11 +75,29 @@
 
 .footer__content {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .join {
-  margin: 0 93px 0 70px;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 1199px) {
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 0 93px 0 70px;
+  }
 }
 
 .join__title {
@@ -84,7 +137,14 @@
     background-color: $accentColor;
   }
 }
-
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: $desktop - 1px) {
+    align-items: center;
+    width: 100%;
+  }
+}
 .subscribe__title {
   font-style: normal;
   font-weight: 700;
@@ -99,7 +159,11 @@
 .subscribe__form {
   margin-top: 20px;
   display: flex;
-  align-items: center;
+  width: 100%;
+  @media screen and (max-width: $desktop - 1px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .subscribe__input {
@@ -109,11 +173,12 @@
 
   background-color: $secondaryBackgroundColor;
   color: rgba(255, 255, 255, 0.6);
+  width: 100%;
 
-  width: 358px;
   height: 50px;
   padding: 15px 0 15px 16px;
-  margin-right: 12px;
+
+  margin-bottom: 20px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -121,6 +186,15 @@
   border-radius: 4px;
 
   transition: border $animationDuration $animationTimingFunction;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 
   &:focus,
   &:hover {

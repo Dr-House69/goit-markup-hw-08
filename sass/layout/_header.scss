@@ -1,6 +1,19 @@
 .header {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid $borderColor;
+  // background: $color-white;
+
+  @media screen and (max-width: $tablet - 1px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+  }
 }
+
 .header__content {
   display: flex;
   align-items: center;
@@ -13,74 +26,151 @@
 .site-nav__menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-left: 93px;
+
+  @media screen and (max-width: $tablet - 1px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 
 .site-nav__item {
-  &:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
 .site-nav__link {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: $mainTextColor;
-  padding: 32px 0;
-  transition: color $animationDuration $animationTimingFunction;
+  @media screen and (min-width: $tablet) {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $mainTextColor;
+    padding: 32px 0;
+    transition: color $animationDuration $animationTimingFunction;
 
-  &:hover,
-  &:focus {
-    color: $accentColor;
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
   }
 }
 
 .site-nav__menu .link {
-  &.current {
-    color: $accentColor;
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      display: block;
-      width: 100%;
-      height: 4px;
-      background-color: $accentColor;
-      border-radius: 2px;
+  @media screen and (min-width: $tablet) {
+    &.current {
+      color: $accentColor;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $accentColor;
+        border-radius: 2px;
+      }
     }
   }
 }
 
 .contact {
-  display: flex;
-  padding: 0;
+  @media screen and (max-width: $tablet - 1px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    // margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
-.contact__item:not(:last-child) {
-  margin-right: 30px;
+
+.contact__item {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
+
 .contact__icon {
-  fill: currentColor;
-  margin-right: 10px;
+  @media screen and (min-width: $tablet) {
+    fill: currentColor;
+    margin-right: 8px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
+}
+.contact__icon--envelope {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    width: 14px;
+    height: 10px;
+  }
+  .contact__icon--smartphone {
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      width: 10px;
+      height: 14px;
+    }
+  }
 }
 .contact__link {
-  display: inline-flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: $secondaryTextColor;
-  padding: 32px 0;
-  transition: color $animationDuration $animationTimingFunction;
+  @media screen and (min-width: $tablet) {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $secondaryTextColor;
+    // padding: 32px 0;
+    transition: color $animationDuration $animationTimingFunction;
+
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+  }
+}
+.header__menu-button {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  background-color: transparent;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
 
   &:hover,
+  &:active,
   &:focus {
-    color: $accentColor;
+    fill: $accentColor;
+    cursor: pointer;
   }
 }

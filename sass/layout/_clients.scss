@@ -1,7 +1,9 @@
 .clients__list {
   display: flex;
-  margin-right: calc(-1 * #{$mainMargin});
-  margin-bottom: calc(-1 * #{$mainMargin});
+
+  @media screen and (max-width: $desktop - 1) {
+    flex-wrap: wrap;
+  }
 }
 
 .clients__item {
@@ -9,18 +11,49 @@
   background-color: $bodyBackgroundColor;
   text-align: center;
   font-size: 16px;
-  letter-spacing: 0.03em;
   line-height: 1.19;
   color: $socialLinkColor;
-  flex-basis: calc(100% / 6 - #{$mainMargin});
+  width: calc((100% - #{$mainMargin}) / 2);
   border-radius: 4px;
-  margin-right: $mainMargin;
-  margin-bottom: $mainMargin;
 
   &:focus,
   &:active,
   &:hover {
     color: $accentColor;
+  }
+
+  @media screen and (max-width: $tablet - 1px) {
+    &:nth-child(2n + 1) {
+      margin-right: $mainMargin;
+    }
+    &:nth-child(-n + 4) {
+      margin-bottom: $mainMargin;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * #{$mainMargin}) / 3);
+
+    &:nth-child(-n + 3) {
+      margin-bottom: $mainMargin;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-right: $mainMargin;
+    }
+
+    &:nth-last-child(-n + 3):not(:last-child) {
+      margin-right: $mainMargin;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 5 * #{$mainMargin}) / 6);
+
+    &:not(:last-child) {
+      margin-right: $mainMargin;
+      margin-bottom: 0;
+    }
   }
 }
 
