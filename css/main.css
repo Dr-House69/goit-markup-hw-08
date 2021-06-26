@@ -1319,10 +1319,8 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__wrapper {
-    margin-bottom: 60px;
-    flex-direction: row;
     align-items: baseline;
   }
 }
