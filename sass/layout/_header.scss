@@ -100,7 +100,7 @@
 }
 
 .contact__item {
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     &:not(:last-child) {
       margin-bottom: 10px;
     }
